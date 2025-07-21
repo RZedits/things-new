@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>||</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Inter+Tight:wght@400;500&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!--    # internal css because of jinja templating to load image-->
+    <style>
+        .bullshero {
+  position: relative;
+  height: auto;
+  color: white;
+  overflow: hidden;
+
+}
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='images/bulls.png') }}"
+                     alt="..."
+                     style="width: 70px; height: 70px;"
+                     class="me-2">
+                <p class="d-none d-sm-block">Bulls Bible School</p>
+            </a>
+            <button class="navbar-toggler pulse-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link px-3 py-2" href="{{url_for('home')}}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 py-2" href="{{url_for('bulls')}}">Bulls Bible
+                        School</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 py-2" href="{{url_for('podcasts')}}">Podcasts and
+                        Videos</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 py-2" href="{{url_for('anointing_streams')}}">Anointing
+                        Streams</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 py-2" href="{{url_for('all_articles')}}">Articles</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="bullshero container rounded-4 py-6 px-2">
+    <div class="  container my-4 mx-2">
+        <h1 class="hero-title"> Bulls Bible School</h1>
+        <hr class="ruler">
+        <p class="container hero-description">Bulls Bible School exists to create an opportunity for in-depth
+            theological training for people in ministry.
+            We aim at establishing students in their most holy faith, not just intellectually but with a keen focus on
+            the spirit aspect of our faith, with the intent of equipping them in the supernatural as well.</p>
+    </div>
+
+    <!-- Why Study With Us Section -->
+
+    <div class="why-choose-section">
+        <div class="container mb-1">
+            <h2 class="text-center text-md-start">Why study with us?</h2>
+            <hr class="ruler">
+
+            <div class="row g-3 py-2 row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex justify-content-center align-items-stretch">
+                <div class="col">
+                    <div class="feature h-100 d-flex flex-column align-items-center text-left p-3">
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                            <img src="{{url_for('static', filename = 'images/graduation-cap.svg')}}"
+                                 style="width: 60px; height: 60px;"
+                                 alt="Competency-Based Learning Icon">
+                        </div>
+                        <p class="flex-grow-1 mb-0 hero-description">Students come to Bull’s Bible School not to “stay”
+                            in their faith but to GROW in faith and to become the Spirit-empowered leaders they are called to be. </p>
+                        <p class="flex-grow-1 mb-0 hero-description">At Bull’s
+                            Bible School, we aim at equipping students intellectually as we couple it with the
+                            supernatural.
+                            We produce balanced and holistic ministers of the gospel.
+                            Our training gives the learner the tools required to explore the depth of the Sacred
+                            Scriptures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container  ">
+    <div class="contact-section-bulls rounded-3">
+        <div class="floating-particles">
+            <div class="particle" style="left: 10%; width: 4px; height: 4px; animation-delay: 0s;"></div>
+            <div class="particle" style="left: 20%; width: 6px; height: 6px; animation-delay: 2s;"></div>
+            <div class="particle" style="left: 30%; width: 3px; height: 3px; animation-delay: 4s;"></div>
+            <div class="particle" style="left: 40%; width: 5px; height: 5px; animation-delay: 1s;"></div>
+            <div class="particle" style="left: 50%; width: 4px; height: 4px; animation-delay: 3s;"></div>
+            <div class="particle" style="left: 60%; width: 6px; height: 6px; animation-delay: 5s;"></div>
+            <div class="particle" style="left: 70%; width: 3px; height: 3px; animation-delay: 2.5s;"></div>
+            <div class="particle" style="left: 80%; width: 5px; height: 5px; animation-delay: 4.5s;"></div>
+            <div class="particle" style="left: 90%; width: 4px; height: 4px; animation-delay: 1.5s;"></div>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Join us</h2>
+                <p class="section-subtitle-bulls">
+                    Reach out through our phone number, email,and social channels listed below. Discover how we can be
+                    part of your spiritual journey
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info-wrapper">
+                    <div class="contact-info">
+
+                        <div class="info-card">
+                            <h3 class="info-title">
+                                <i class="fas fa-phone"></i>
+                                Phone number
+                            </h3>
+                            <div class="info-content">
+                                <a href="mailto:sayomilembo@gmail.com">070-237-4140</a>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <h3 class="info-title">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Address
+                            </h3>
+                            <div class="info-content">
+                                P.O BOX 12345<br>
+                                Eldoret, Uasin Gishu County<br>
+                                Kenya
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 class="info-title">
+                                <i class="fas fa-envelope"></i>
+                                Email
+                            </h3>
+                            <div class="info-content">
+                                <a href="mailto:sayomilembo@gmail.com">sayomilembo@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 class="info-title">
+                                <i class="fas fa-share-alt"></i>
+                                Connect With Us
+                            </h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link twitter" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link facebook" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link github" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-link instagram" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+<script>
+    // Simple fade-in animation for elements when they come into view
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Apply fade-in to cards when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.instructor-card, .blog-card, .feature');
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    });
+
+    // Smooth scroll for mobile navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
+
+
+<!-- Minimal JavaScript for enhanced mobile experience -->
+
+

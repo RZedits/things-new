@@ -1,0 +1,59 @@
+{% include 'header.html' %}
+<body data-route="{{ request.path }}">
+<section class="container  pt-5">
+    <div class="album">
+        <div class="card shadow-sm mt-1">
+
+            <div class="card-body">
+                <h1><strong>{{post.title}}</strong></h1>
+                <p class="article-subtitle"> {{post.sub_title}}</p>
+                <div class="video-container mb-2">
+                    <img src="{{post.post_photo}}"
+                         class="img-fluid rounded-3 mb-3"
+                         alt="Lead Instructor"
+                         style="width: 100%;  height: 280px; object-fit: cover;">
+
+                </div>
+                <hr>
+
+
+                <div class="row w-100  d-flex align-items-center mt-2 ">
+                    <div class="col-4 ">
+                        <img src="{{post.author_url}}"
+                         class="img-fluid rounded-circle mb-3"
+                         alt="Lead Instructor"
+                         style="width: 65px; max-width: 280px; height: 65px; object-fit: cover;">
+                    </div>
+                    <div class="col-8">
+                        <h2><strong>{{post.author}}</strong> </h2>
+                        <p> {{ post.day}} </p>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="container article-body">
+                {{post.body|safe}}
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <a href="https://www.youtube.com/watch?v=d7swcE__USA"
+                           class="cta-btn cta-primary">View comments</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const route = document.body.dataset.route;
+  const toggler = document.querySelector(".navbar-toggler");
+
+  if (route === "/" || route === "/articles") {
+    toggler.classList.remove("pulse-border");
+  }
+});
+</script>
+</body>
+</html>

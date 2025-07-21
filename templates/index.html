@@ -1,0 +1,191 @@
+{% include 'header.html' %}
+<body>
+<section class="hero-container">
+    <div class="hero-bg"></div>
+
+    <div class="floating-elements">
+        <div class="floating-circle circle-1"></div>
+        <div class="floating-circle circle-2"></div>
+        <div class="floating-circle circle-3"></div>
+    </div>
+
+    <div class="hero-card">
+        <div class="hero-content">
+            <div class="text-content">
+                <h1 class="hero-title">About Us</h1>
+                <hr>
+                <p class="hero-subtitle">Vision</p>
+                <p class="hero-description">
+                    We’re passionate about seeing believers established in their true
+                    identity in Christ accordingly to 2 Corinthians 5:17. We desire to
+                    partner with Holy Spirit in igniting souls to be on fire for the Lord,
+                    as we continue to conform to the image of the risen Son, hence demonstrating
+                    and manifesting our sonship in the Kingdom effectively.
+                </p>
+                <p class="hero-subtitle">Mission</p>
+                <p class="hero-description">
+                    We are dedicated to conducting conferences, seminars and online
+                    interactions aimed at empowering believers to function as real sons in the Kingdom -
+                    demonstrating the Kingdom in all aspects.
+                </p>
+                <div class="cta-container">
+                    <a href="#" class="cta-btn cta-primary">Discover More</a>
+                </div>
+            </div>
+
+
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/hero.jpg') }}"
+                     alt="Team collaboration"
+                     class="hero-image">
+                <div class="image-overlay"></div>
+                <div class="pulse-ring"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--sermons and podcasts section-->
+<section class="container my-5">
+    <div class=" latest"></div>
+    <h1> Latest from sermons and podcast</h1>
+    <hr>
+    <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="video-container">
+                            <iframe
+                                    src="https://www.youtube.com/embed/d7swcE__USA"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                                    allowfullscreen
+                            >
+                            </iframe>
+                        </div>
+                        <div class="card-body"><p class="card-text">Kingdom power part 1. Discover the extra-ordinary
+                            power of the kingdom of God.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://www.youtube.com/watch?v=d7swcE__USA"
+                                       class="btn btn-sm btn-outline-secondary">View in Youtube</a>
+                                </div>
+                                <small class="text-body-secondary">Length: 3 mins</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="video-container">
+                            <iframe width="100%" height=225
+                                    src="https://www.youtube.com/embed/d7swcE__USA"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="card-body"><p class="card-text">Kingdom power part 1. Discover the extra-ordinary
+                            power of the kingdom of God.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://www.youtube.com/watch?v=d7swcE__USA"
+                                       class="btn btn-sm btn-outline-secondary">View in Youtube</a>
+                                </div>
+                                <small class="text-body-secondary">Length: 3 mins</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="video-container">
+                            <iframe width="100%" height=225
+                                    src="https://www.youtube.com/embed/d7swcE__USA"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="card-body"><p class="card-text">Kingdom power part 1. Discover the extra-ordinary
+                            power of the kingdom of God.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://www.youtube.com/watch?v=d7swcE__USA"
+                                       class="btn btn-sm btn-outline-secondary">View in Youtube</a>
+                                </div>
+                                <small class="text-body-secondary">Length: 3 mins</small></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% include 'footer.html' %}
+<script>
+    // Add interactive mouse movement effect
+    document.addEventListener('mousemove', (e) => {
+        const cards = document.querySelectorAll('.hero-card');
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+
+        cards.forEach(card => {
+            const rotateX = (y - 0.5) * 10;
+            const rotateY = (x - 0.5) * -10;
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+    });
+
+    // Reset card rotation when mouse leaves
+    document.addEventListener('mouseleave', () => {
+        const cards = document.querySelectorAll('.hero-card');
+        cards.forEach(card => {
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+        });
+    });
+
+    // Add touch interaction for mobile
+    let touchStartTime = 0;
+    document.addEventListener('touchstart', (e) => {
+        touchStartTime = Date.now();
+    });
+
+    document.addEventListener('touchend', (e) => {
+        const touchDuration = Date.now() - touchStartTime;
+        if (touchDuration < 150) { // Quick tap
+            const target = e.target.closest('.hero-card');
+            if (target) {
+                target.style.animation = 'none';
+                target.offsetHeight; // Trigger reflow
+                target.style.animation = 'cardSlideIn 0.3s ease-out';
+            }
+        }
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for scroll animations
+    document.querySelectorAll('.hero-card').forEach(el => {
+        observer.observe(el);
+    });
+</script>
+</body>
+</html>
