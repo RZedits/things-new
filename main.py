@@ -55,9 +55,11 @@ class Articles(db.Model):
             "day": self.day,
             "body": self.body
         }
-with app.app_context():
-    db.drop_all()
-    db.create_all()
+"""comment out the lines below during production"""
+# with app.app_context():
+#     db.drop_all()
+#     db.create_all()
+
 # WTForm for new article
 class Article(FlaskForm):
     author = StringField("Author's name", validators=[DataRequired()])
@@ -93,7 +95,7 @@ def create_article():
         )
         db.session.add(new_article)
         db.session.commit()
-        return redirect(url_for("main.all_articles"))
+        return redirect(url_for("all_articles"))
     return render_template("create_article.html", form= form)
 
 @app.route("/all_articles")
