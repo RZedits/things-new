@@ -42,7 +42,7 @@ class Articles(db.Model):
     post_photo: Mapped[str] = mapped_column(String(250), nullable=True)
     author_url: Mapped[str] = mapped_column(String(250), nullable=True)
     day: Mapped[date] = mapped_column(Date, nullable=False)
-    body: Mapped[str] = mapped_column(String(2500), nullable=False)
+    body: Mapped[str] = mapped_column(String(25000), nullable=False)
 
     def to_dict(self):
         return {
