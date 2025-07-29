@@ -25,6 +25,7 @@ except OSError:
 # Define DB path relative to instance folder for better portability
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 db_path = os.path.join(app.instance_path, "atn.db")
+# app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{db_path}"
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:kiHkUijdnyVTkGfzNYOIItXmIfCYeqgU@postgres.railway.internal:5432/railway"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False  # Optional: Disable modification tracking
 
