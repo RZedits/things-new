@@ -12,21 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Inter+Tight:wght@400;500&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <!--    # internal css because of jinja templating to load image-->
-    <style>
-        .bullshero {
-  position: relative;
-  height: auto;
-  color: white;
-  overflow: hidden;
-
-}
-    </style>
 </head>
 <body>
 <header>
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
+        <div class="container navbar-container">
             <a class="navbar-brand" href="#">
                 <img src="{{ url_for('static', filename='images/bulls.png') }}"
                      alt="..."
@@ -53,22 +43,23 @@
         </div>
     </nav>
 </header>
-<section class="bullshero container rounded-4 py-6 px-2">
-    <div class="  container my-4 mx-2">
+<section class="container rounded-4 py-6 px-2">
+    <div class="  container pt-4 mt-5 mx-2">
         <h1 class="hero-title"> Bulls Bible School</h1>
-        <hr class="ruler">
-        <p class="container hero-description">Bulls Bible School exists to create an opportunity for in-depth
-            theological training for people in ministry.
+        <hr class="fancy-hr">
+        <p class="container hero-description-bulls mb-2">Bulls Bible School exists to create an opportunity for in-depth
+            theological training for people in ministry.</p>
+        <p class="container hero-description-bulls">
             We aim at establishing students in their most holy faith, not just intellectually but with a keen focus on
-            the spirit aspect of our faith, with the intent of equipping them in the supernatural as well.</p>
+            the spiritual aspect of our faith, with the intent of equipping them in the supernatural as well.</p>
     </div>
 
     <!-- Why Study With Us Section -->
 
     <div class="why-choose-section">
-        <div class="container mb-1">
+        <div class="container-bulls mb-1">
             <h2 class="text-center text-md-start">Why study with us?</h2>
-            <hr class="ruler">
+            <hr class="fancy-hr">
 
             <div class="row g-3 py-2 row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex justify-content-center align-items-stretch">
                 <div class="col">
@@ -78,11 +69,12 @@
                                  style="width: 60px; height: 60px;"
                                  alt="Competency-Based Learning Icon">
                         </div>
-                        <p class="flex-grow-1 mb-0 hero-description">Students come to Bull’s Bible School not to “stay”
+                        <p class="flex-grow-1 mb-1 hero-description-bulls text-justify">Students come to Bull’s Bible School not to “stay”
                             in their faith but to GROW in faith and to become the Spirit-empowered leaders they are called to be. </p>
-                        <p class="flex-grow-1 mb-0 hero-description">At Bull’s
+                        <p class="flex-grow-1 mb-1 hero-description-bulls text-justify">At Bull’s
                             Bible School, we aim at equipping students intellectually as we couple it with the
-                            supernatural.
+                            supernatural.</p>
+                        <p class="flex-grow-1 mb-1 hero-description-bulls text-justify">
                             We produce balanced and holistic ministers of the gospel.
                             Our training gives the learner the tools required to explore the depth of the Sacred
                             Scriptures.</p>
@@ -110,7 +102,7 @@
 
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Join us</h2>
+                <h2 class="section-title-bulls">Join us</h2>
                 <p class="section-subtitle-bulls">
                     Reach out through our phone number, email,and social channels listed below. Discover how we can be
                     part of your spiritual journey
@@ -122,16 +114,16 @@
                     <div class="contact-info">
 
                         <div class="info-card">
-                            <h3 class="info-title">
+                            <h3 class="info-title-bulls">
                                 <i class="fas fa-phone"></i>
                                 Phone number
                             </h3>
                             <div class="info-content">
-                                <a href="mailto:sayomilembo@gmail.com">070-237-4140</a>
+                                <a href="mailto:sayomilembo@gmail.com">070-000-0000</a>
                             </div>
                         </div>
                         <div class="info-card">
-                            <h3 class="info-title">
+                            <h3 class="info-title-bulls">
                                 <i class="fas fa-map-marker-alt"></i>
                                 Address
                             </h3>
@@ -143,17 +135,17 @@
                         </div>
 
                         <div class="info-card">
-                            <h3 class="info-title">
+                            <h3 class="info-title-bulls">
                                 <i class="fas fa-envelope"></i>
                                 Email
                             </h3>
                             <div class="info-content">
-                                <a href="mailto:sayomilembo@gmail.com">sayomilembo@gmail.com</a>
+                                <a href="mailto:sayomilembo@gmail.com">info@bullsbibleschool.org</a>
                             </div>
                         </div>
 
                         <div class="info-card">
-                            <h3 class="info-title">
+                            <h3 class="info-title-bulls">
                                 <i class="fas fa-share-alt"></i>
                                 Connect With Us
                             </h3>
@@ -163,9 +155,6 @@
                                 </a>
                                 <a href="#" class="social-link facebook" aria-label="Facebook">
                                     <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="social-link github" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
                                 </a>
                                 <a href="#" class="social-link instagram" aria-label="Instagram">
                                     <i class="fab fa-instagram"></i>
